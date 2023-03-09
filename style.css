@@ -61,9 +61,10 @@ header{
     justify-content: center;
 }
 
+
 .menu-toggle{
-    color: white;
-    font-size: 2.2rem;
+    color: #928787;
+    font-size: 2.1rem;
     position: absolute;
     top: 50%;
     transform: translateY(50%);
@@ -90,6 +91,7 @@ header{
     justify-content: space-around;
     z-index: 1250;
     transform: translateX(-100%);
+    transition: opacity .5s;
 }
 
 .nav::before{
@@ -130,20 +132,20 @@ header{
 }
 
 .nav-item{
-    border-bottom: 2px solid rgba(255,255,255, .3);
+    border-bottom: 2px solid #252525;
 }
 
 .nav-link{
     display: block;
-    color: #fff;
+    color: #252525;
     text-transform: uppercase;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     letter-spacing: 2px;
     margin-right: -2px;
 }
 
 .nav-link:hover{
-    color: #3bcc75;
+    color: #252525;
 }
 
 /*Hero*/
@@ -163,7 +165,7 @@ header{
 .h2-sub{
     font-size: 3rem;
     font-family: 'Poppins', sans-serif;
-    color: black;
+    color: rgb(0, 0, 0);
     font-weight: 600;
     line-height: .4;
 }
@@ -173,12 +175,11 @@ header{
     font-size: 3rem;
 }
 .head{
-    color: #fff;
-    font-size: 3.7rem;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
+    color: #252525;
+    font-size: 1.5rem;
+    font-family: 'Poppins', serif;
     font-weight: 900;
-    letter-spacing: .4rem;
+    padding: 20px;
 }
 
 .circle{
@@ -188,12 +189,13 @@ header{
 }
 
 .he-des h5{
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-size: 1.4rem;
-    font-weight: 100;
+    font-family: sans-serif;
+    font-weight: 200;
     text-transform: uppercase;
     margin-bottom: 1.2rem;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     margin-right: -3px;
 }
 
@@ -210,5 +212,146 @@ header{
     padding: 1.5rem 3rem;
     color: black;
     filter: drop-shadow(0px 0px 5px rgb(61, 29, 24));
+    border-radius: .2rem;
+}
+
+.cta-btn:hover,
+.cta-btn:focus{
+    color: #fff;
+    background-color: #252525;
+}
+
+.global{
+    text-align: center;
+    margin-top: 3.9rem;
+}
+
+.dis-sto .global{
+    margin-top: 6.9rem;
+}
+
+.global .circle{
+    color: #252525;
+    margin: 2.4rem 0;
+}
+
+.head-dark{
+    color: #fcfcfc;
+    letter-spacing: .7rem;
+    margin-right: -.7rem;
+}
+
+.global .h2-sub{
+    letter-spacing: -1px;
+    line-height: .42;
+}
+
+.res-info{
+    text-align: center;
+}
+
+.res-des{
+    margin-bottom: 3rem;
+}
+
+.res-des p{
+    line-height: 1.6;
+    margin-bottom: 2.4rem;
+}
+
+/*menu*/
+
+.taste{
+    background: url(Imag/Prop.jpg) center no-repeat;
+    background-size: cover;
+    height: 95vh;
+}
+
+.bt{
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+}
+
+/*camisetas*/
+
+.image-group{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:  1.5rem;
+}
+
+.disco .res-des{
+    padding-top: 3rem;
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 900px) {
+    section{
+        padding: 7.9rem;
+    }
+
+    .menu-toggle{
+        display: none;
+    }
+    
+    .nav{
+        justify-content: space-between;
+    }
+
+    .nav-list{
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        padding: 0;
+        justify-content: initial;
+        flex-direction: row;
+        transform: initial;
+        transition: initial;
+    }
+
+    .nav-item{
+        margin: 0 2.4rem;
+    }
+
+    .nav-item:hover{
+        color: #ffffff;
+    }
+
+    .nav-link{
+        font-size: 1.3rem;
+    }
+
+    .active{
+        position: relative;
+    }
+
+    .active:hover{
+        color: white;
+    }
+
+    .h2-sub{
+        font-size: 3rem;
+    }
+
+    .fil{
+        font-size: 3rem;
+    }
+
+    .head{
+        font-size: 4.7rem;
+        letter-spacing: .8rem;
+    }
+
+    .res-info{
+        display: flex;
+        align-items: center;
+    }
+
+    .pad-rig{
+        padding-right: 7rem;
+    }
+
 
 }
