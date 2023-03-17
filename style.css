@@ -286,7 +286,7 @@ header{
     margin-bottom: 0;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 768px) {
     section{
         padding: 7.9rem;
     }
@@ -355,6 +355,7 @@ header{
 
 }
 
+
 /*Footer*/
 .pie-pagina{
     width: 100%;
@@ -404,8 +405,7 @@ header{
 }
 
 .pie-pagina .primer-grupo .box p a:hover{
-    color: rgb(144, 222, 255); 
-      
+    color: rgb(144, 222, 255);   
 }
 
 .pie-pagina .primer-grupo .box p{
@@ -446,7 +446,6 @@ header{
 .contenedor{
     display: flex;
     flex-direction: row;
-   
 }
 
 .producto-destacado >h1{
@@ -476,14 +475,19 @@ display: flex;
 flex-direction: row;
 flex-wrap: wrap;
 margin-bottom: 50px;
+}
 
-
+.categorias .container >h1{
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 50px;
+    margin-block-end: 20px;
 }
 
 .categorias-destacadas >img{
     width: 25%;
-    margin: 0 50px;
-    
+    margin: 10px 50px;
 }
 
 .categorias{
@@ -497,4 +501,98 @@ margin-bottom: 50px;
     padding-left: 300px;
     padding-right: 300px;
     margin-bottom: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .pie-pagina .primer-grupo{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }  
+
+    .pie-pagina .primer-grupo .red-social a{
+        margin-left: 10px;
+    }
+    
+    .contenedor{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 12%;
+    }
+
+    .producto-destacado >h1{
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .producto-destacado >p{
+        font-size: 20px;
+        line-height: 60px;
+    }
+
+    .producto-destacado >a{
+        top: 530%;
+        left: 15%;
+        position: absolute;
+        margin-top: 20px;
+        margin-block-end: 20px; 
+    }
+
+    .producto-destacado{
+        margin-left: 55px;
+        margin-top: 10%;
+        position: relative;
+    }
+
+    .categorias-destacadas{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+
+    .categorias .container >h1{
+        margin-block-start: 150px;
+        font-size: 30px;
+        line-height: 10px;
+        margin-left: 28px;
+        
+    }
+        
+    .categorias-destacadas >img{
+        width: 100%;
+        margin: 50px 0px;
+    }
+
+    .botones{
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        padding-left: 300px;
+        padding-right: 300px;
+        margin-bottom: 60px;
+        position: relative;
+    }
+
+    .boton1{
+        position: absolute;
+        top: 0;
+        left: 23%;
+        margin-top: -77px;
+    }
+
+    .boton2{
+        position: absolute;
+        top: 0;
+        left: 23%; 
+        margin-top: -680px;
+    }
+
+    .boton3{
+        position: absolute;
+        left: 23%;
+        top: 0;
+        margin-top: -1280px; 
+    }
 }
