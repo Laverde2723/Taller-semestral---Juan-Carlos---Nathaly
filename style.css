@@ -288,11 +288,11 @@ header{
 
 @media screen and (min-width: 768px) {
     section{
-        padding: 7.9rem;
+        padding: 8.9rem;
     }
 
     .menu-toggle{
-        display: none;
+        display: block;
     }
     
     .nav{
@@ -352,8 +352,6 @@ header{
     .pad-rig{
         padding-right: 7rem;
     }
-
-
 
 }
 
