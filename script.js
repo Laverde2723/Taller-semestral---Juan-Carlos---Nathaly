@@ -32,3 +32,5 @@ categoria3.addEventListener("mouseleave", e=>{
     categoria3.src="./Imag/modelo3.jpg"
     
 })
+
+app.post()
