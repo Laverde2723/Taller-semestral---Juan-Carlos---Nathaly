@@ -9,33 +9,24 @@
     <title>Productos</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav class="nav">
-                <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                    <i class="fas fa-times"></i>
-                </div>
-                <a href="#" class="logo">Bershka</a>
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="https://www.bershka.com/co/h-woman.html" class="nav-link active">Mujer</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://www.bershka.com/co/h-man.html" class="nav-link">Hombre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://www.bershka.com/co/hombre/ropa/lo-más-vendido-c1010242587.html" class="nav-link">ROPA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://www.bershka.com/co/hombre/zapatos-c1010193202.html" class="nav-link">ZAPATOS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://www.bershka.com/co/hombre/accesorios-c1010193172.html" class="nav-link">ACCESORIOS</a>
-                    </li>
-                </ul>
-            </nav>
+    <div class="wrapper">
+        <div id="search-container">
+            <input type="search" 
+            id="search-input" 
+            placeholder="Busca el producto aqui.."
+            />
+            <button id="search">Buscar</button>
         </div>
-    </header>
-</body>
-</html>
+        <div id="buttons">
+            <button class="button-value" onclick="filterProduct('Todo')">Todo</button>
+            <button class="button-value" onclick="filterProduct('Japones')">Japones</button>
+            <button class="button-value" onclick="filterProduct('Urban')">Urban</button>
+            <button class="button-value" onclick="filterProduct('Blancas')">Blancas</button>
+            <button class="button-value" onclick="filterProduct('Negras')">Negras</button>
+        </div>
+        <div id="products"></div>
+    </div>
+<body>
+<script src="script.js"></script>
+    
+ 
