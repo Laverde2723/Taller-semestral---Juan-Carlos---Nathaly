@@ -25,12 +25,12 @@ body{
 #search-container input{
     background-color: transparent;
     width: 40%;
-    border-bottom: 2px solid #110f29;
+    border-bottom: 2px solid #39393d;
     padding: 1em 0.3em;
 }
 
 #search-container input:focus{
-    border-bottom-color: #6759ff;
+    border-bottom-color: #39393d;
 }
 
 #search-container button{

@@ -195,15 +195,17 @@ let detailUrl = '../Product-Detail/index.html?id='+url ;
 
     document.getElementById("search").addEventListener
         ("click", () => {
+            
             let searchInput = document.getElementById
                 ("search-input").value;
             let element = document.querySelectorAll(".card");
-
-            element.forEach((element, index) => {
-                if (element.innerText.includes(searchInput.toUpperCase())) {
-                    cards[index].classList.remove("hide");
+           
+            element.forEach((item, index) => {
+                
+                if (item.innerText.includes(searchInput.toUpperCase())) {
+                    element[index].classList.remove("hide");
                 } else {
-                    cards[index].classList.add("hide");
+                    element[index].classList.add("hide");
                 }
             })
         })
