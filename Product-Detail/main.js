@@ -14,7 +14,9 @@ stars.forEach(function(star,index) {
 const botones = document.querySelectorAll('.boton');
 
 botones.forEach((boton) => {
+  console.log('xd');
   boton.addEventListener('click', () => {
+    
     botones.forEach((boton) => {
       boton.classList.remove('seleccionado');
     });
@@ -22,20 +24,21 @@ botones.forEach((boton) => {
   });
 });
 
-const botones2 = document.querySelectorAll('.boton2');
+const botones2 = document.querySelectorAll('.botonn');
 
-botones2.forEach((boton2) => {
-  boton2.addEventListener('click', () => {
-    botones2.forEach((boton2) => {
-      boton2.classList.remove('seleccionado');
+botones2.forEach((botonn) => {
+  botonn.addEventListener('click', () => {
+    botones2.forEach((botonn) => {
+      botonn.classList.remove('seleccionado');
     });
-    boton2.classList.add('seleccionado');
+    botonn.classList.add('seleccionado');
   });
 });
 
+
+
+
 let allProducts = [];
-
-
 
 arrayProducts()
 
@@ -58,21 +61,7 @@ console.log(product);
 let container = document.getElementById('container')
 
 container.innerHTML=`
-<div class="producto">
-        <h1>Camisa para hombre</h1>
-        <img src="../Products/${product.image}" alt="camiseta"> 
-            <div class="tarjetaCarrusel">A</div>
-            <div class="flechasCarrusel">
-
-            </div>
-        </div>    
-    </div>
-
-    <div class="contenedor2">
-        <h2>${product.productName}</h2>
-        <p>Ref ${product.category}</p>
-        <p class="precio">$${product.price}</p>  
-    </div>  
+<section-component></section-component>
 `
 
 const boton = document.querySelector('#carrito');
