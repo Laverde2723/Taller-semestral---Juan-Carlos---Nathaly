@@ -161,15 +161,16 @@ async function arrayProducts() {
     data.forEach(element => {
         allProducts.push(element)
     })
-   
+
 
     for (let i of allProducts) {
-let url = i.productName.replaceAll(" ","-");
-let detailUrl = '../Product-Detail/index.html?id='+url ;
+        let url = i.productName.replaceAll(" ", "-");
+        let detailUrl = '../Product-Detail/index.html?id=' + url;
 
         let card = document.createElement("a");
         card.href = detailUrl;
-        card.classList.add("card", i.category, "hide");
+        let priceProduct = i.price.replace(',', '');
+        card.classList.add("card", i.category, "hide", priceProduct.replace(' COP', ''));
         let imgContainer = document.createElement("div");
         imgContainer.classList.add("image-container");
         let image = document.createElement("img");
@@ -195,13 +196,13 @@ let detailUrl = '../Product-Detail/index.html?id='+url ;
 
     document.getElementById("search").addEventListener
         ("click", () => {
-            
+
             let searchInput = document.getElementById
                 ("search-input").value;
             let element = document.querySelectorAll(".card");
-           
+
             element.forEach((item, index) => {
-                
+
                 if (item.innerText.includes(searchInput.toUpperCase())) {
                     element[index].classList.remove("hide");
                 } else {
@@ -246,3 +247,41 @@ function filterProduct(value) {
     });
 }
 
+function filterProductPrice(value) {
+    let buttons = document.querySelectorAll(".button-value");
+    buttons.forEach(button => {
+        if (value.toUpperCase() == button.innerText.toUpperCase()) {
+            button.classList.add("active");
+
+        } else {
+            button.classList.remove("active");
+        }
+    });
+
+    let elements = document.querySelectorAll(".card");
+    elements.forEach(element => {
+        element.classList.remove("hide");
+        if (value == "Todo") {
+            element.classList.remove("hide");
+        } else {
+            if (value === 'baratas') {
+console.log(parseInt(element.classList.item(element.classList.length - 1))<100000);
+                if (parseInt(element.classList.item(element.classList.length - 1)) < 100000) {
+                    console.log('barata');
+                    element.classList.remove("hide");
+                } else {
+                    console.log('no esta');
+                    element.classList.add("hide");
+                }
+            } else if (value === 'caras') {
+console.log('cara');
+                if (parseInt(element.classList.item(element.classList.length - 1)) > 100000) {
+                    element.classList.remove("hide");
+                } else {
+                    console.log('no esta');
+                    element.classList.add("hide");
+                }
+            }
+        }
+    });
+}
