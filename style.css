@@ -109,6 +109,7 @@ header{
 }
 
 .open .fa-times{
+    
     display: block;
 }
 
@@ -262,6 +263,7 @@ header{
 /*menu*/
 
 .taste{
+
     background: url(Imag/Prop.jpg) center no-repeat;
     background-size: cover;
     height: 95vh;
@@ -292,7 +294,7 @@ header{
     }
 
     .menu-toggle{
-        display: block;
+        display: flex;
     }
     
     .nav{
