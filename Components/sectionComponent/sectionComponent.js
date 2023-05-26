@@ -1,3 +1,5 @@
+import { traerProductos } from "../../Products/firebase.js";
+
 class SectionComponent extends HTMLElement{
     constructor(){
         super();
@@ -7,17 +9,15 @@ class SectionComponent extends HTMLElement{
     }
 
     async arrayProducts() {
-        let response = await fetch("https://apimocha.com/nathajson/products")
-        let data = await response.json()
-        data.forEach(element => {
-            allProducts.push(element)
-        })
+        this.allProducts = await traerProductos()
+
         let url = window.location.search
     let paras = new URLSearchParams(url)
     let productId = paras.get('id').replace('"',"")
     
-    let product = allProducts.find((item)=>{
-        let compare = item.productName.replaceAll(" ","-")
+    let product = this.allProducts.find((item)=>{
+        let compare = item.id
+        console.log(compare);
         return compare === productId;
     })
     this.innerHTML= `<div class="producto">

@@ -1,3 +1,5 @@
+import { traerProductos } from "../Products/firebase.js";
+
 const stars = document.querySelectorAll('.star');
 
 stars.forEach(function(star,index) {
@@ -43,17 +45,20 @@ let allProducts = [];
 arrayProducts()
 
 async function arrayProducts() {
-    let response = await fetch("https://apimocha.com/nathajson/products")
+    /*let response = await fetch("https://apimocha.com/nathajson/products")
     let data = await response.json()
     data.forEach(element => {
         allProducts.push(element)
-    })
+    })*/
+    allProducts = await traerProductos()
+
     let url = window.location.search
 let paras = new URLSearchParams(url)
 let productId = paras.get('id').replace('"',"")
 
 let product = allProducts.find((item)=>{
-    let compare = item.productName.replaceAll(" ","-")
+    let compare = item.id
+    console.log(compare);
     return compare === productId;
 })
 console.log(product);

@@ -1,5 +1,7 @@
-/*let products = {
-    data: [
+import { subirProductos, traerProductos } from "./firebase.js";
+/*
+let products = [
+    
         {
             productName: "Camiseta manga corta boxy fit print",
             image: "643ea153236d28888cd6680ab599dfcc-2413130700_2_13_0.jpg",
@@ -149,23 +151,24 @@
             category: "Blancas"
 
         },
+    ]
 
-    ],
-};*/
+    subirProductos(products)*/
 
 let allProducts = [];
 
 async function arrayProducts() {
-    let response = await fetch("https://apimocha.com/nathajson/products")
+   /* let response = await fetch("https://apimocha.com/nathajson/products")
     let data = await response.json()
     data.forEach(element => {
         allProducts.push(element)
-    })
+    })*/
 
+    allProducts = await traerProductos()
 
     for (let i of allProducts) {
         let url = i.productName.replaceAll(" ", "-");
-        let detailUrl = '../Product-Detail/index.html?id=' + url;
+        let detailUrl = '../Product-Detail/index.html?id=' + i.id;
 
         let card = document.createElement("a");
         card.href = detailUrl;
